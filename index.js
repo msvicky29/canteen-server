@@ -8,11 +8,7 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors({
-    origin: 'http://localhost:5173',
-    methods: ['GET', 'POST', 'DELETE', 'PATCH'],
-    credentials: true
-}));
+app.use(cors());
 
 // Important: Place these middleware before routes
 app.use(express.json());
