@@ -10,7 +10,7 @@ export function LoginModal({ onClose, onVerify, userEmail }) {
     try {
       setLoading(true);
       setError('');
-      const response = await fetch('http://localhost:5000/api/auth/generate-otp', {
+      const response = await fetch('https://canteen-server-kyek.onrender.com/api/auth/generate-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ export function LoginModal({ onClose, onVerify, userEmail }) {
     try {
       setLoading(true);
       setError('');
-      const response = await fetch('http://localhost:5000/api/auth/verify-otp', {
+      const response = await fetch('https://canteen-server-kyek.onrender.com/api/auth/verify-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
