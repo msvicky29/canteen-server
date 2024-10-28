@@ -20,7 +20,7 @@ const LoginPage = () => {
         setError('')
         
         // Verify credentials and send OTP
-        const response = await fetch('http://localhost:5000/api/auth/login', {
+        const response = await fetch('https://canteen-server-kyek.onrender.com/auth/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
