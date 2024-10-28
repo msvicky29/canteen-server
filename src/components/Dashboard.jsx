@@ -16,7 +16,7 @@ function Dashboard() {
 
   const fetchItems = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/menu-items');
+      const response = await fetch('https://canteen-server-kyek.onrender.com/api/menu-items');
       if (response.ok) {
         const data = await response.json();
         setItems(data);
@@ -38,7 +38,7 @@ function Dashboard() {
 
   const handleDeleteItem = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/menu-items/${id}`, {
+      const response = await fetch(`https://canteen-server-kyek.onrender.com/api/menu-items/${id}`, {
         method: 'DELETE',
       });
 
@@ -55,7 +55,7 @@ function Dashboard() {
 
   const handleToggleStatus = async (id, newStatus) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/menu-items/${id}/status`, {
+      const response = await fetch(`https://canteen-server-kyek.onrender.com/api/menu-items/${id}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
