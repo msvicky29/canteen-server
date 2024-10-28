@@ -19,7 +19,7 @@ export function AddItemForm({ onClose, onSuccess }) {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/menu-items', {
+      const response = await fetch('https://canteen-server-kyek.onrender.com/api/menu-items', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
